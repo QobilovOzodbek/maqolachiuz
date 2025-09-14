@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Maqolalar - Maqolachi{% endblock %}
+{% block content %}
+<h2 class="mb-4">Barcha maqolalar</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Muallif</th>
+            <th>Maqola</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for u in users %}
+        <tr>
+            <td>{{ u.fullname }}</td>
+            <td><a href="/uploads/{{ u.article_filename }}" target="_blank">📑 Yuklab olish</a></td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="2">Hali hech qanday maqola yuklanmagan.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

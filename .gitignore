@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+myenv/
+*.egg-info/
+dist/
+build/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env
+.env.*
+secrets.json
+
+# Database, uploads, logs
+*.db
+uploads/
+downloads/
+*.sqlite3
+*.log
+
+# Python bytecode
+*.pyc
+
+# Virtual env
+venv/

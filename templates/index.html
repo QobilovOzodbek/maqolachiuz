@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Bosh sahifa - Maqolachi{% endblock %}
+{% block content %}
+<h2 class="mb-4">📄 Oxirgi maqolalar</h2>
+<div class="list-group">
+    {% for u in users %}
+    <a href="/uploads/{{ u.article_filename }}" target="_blank" class="list-group-item list-group-item-action">
+        <strong>{{ u.fullname }}</strong> — 📑 Maqola
+    </a>
+    {% else %}
+    <p>Hozircha maqola yo‘q.</p>
+    {% endfor %}
+</div>
+{% endblock %}
